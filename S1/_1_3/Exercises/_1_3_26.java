@@ -7,13 +7,16 @@ public class _1_3_26 extends _1_3_20<String> {
         // Start from 1st element
         Node node = this.first;
         // Set index to 1 (0 is the initial case)
-        int i = 1;
+        int i = 0;
         // Iterate through items
         while (i < this.N) {
-            // If current node (which represents i - 1)
+            // If current node is 
             if (node.item == key) {
-                delete(i - 1); // This is not efficient. "delete" is already 2*n and we're doing this for each entry in the list (potentially). Polynomial complexity
+                node = node.next; // Jump to next element before deletion (don't increase index)
+                delete(i); // This is not efficient. "delete" is already 2*n and we're doing this for each entry in the list (potentially). Polynomial complexity
             } else {
+                // Increment i and jump to next node if not deleting
+                node = node.next;
                 i++;
             }
         }

@@ -14,6 +14,7 @@ public class _1_3_20<Item> extends MyLinkedList<Item> {
         if (this.N == 1) {
             this.first = null;
             this.N--;
+            return null;
         }
         // Get node and its predecessor
         Node node = this.findAt(idx);
