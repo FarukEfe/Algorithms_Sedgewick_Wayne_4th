@@ -1,0 +1,2 @@
+The union algorithm provided in the question is wrong because depending on the tree, there's a chance that some other id in the list also shares the same root as p.
+In that case, the code would make the change on id[i] where i != p, so we've connected the wrong node to id[q].

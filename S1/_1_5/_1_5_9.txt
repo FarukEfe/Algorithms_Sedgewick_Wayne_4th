@@ -1,0 +1,32 @@
+Let's visualize the tree of this weighted quick union:
+
+                1
+              / | \
+             /  |  \
+            /   |   \
+           0    3    6
+               /\     \
+              2  7     \      
+                        5
+                       / \
+                      /   \
+                     4     9
+                    /
+                    8
+
+If we inspect the 6-subtree, we realize that it cannot be created w. r. t. the definition fo weighted quick union.
+
+If we 1st bind 6 and 5, then a union with 9 would have to connect 9 directly to 6 (otherwise 5 would be the root).
+
+If we were to construct the 5-tree by the following sequence:
+
+union(9,5)
+union(8,4)
+union(4,5) (so far a valid tree)
+
+Then we wouldn't be able to bind this 5-tree to 6 as the root, since a sole node is smaller in length.
+Even if we assumed that The rest of the 1-tree was created, then the 5-tree would bind directly to 1, not 6.
+
+Knowing that there's no other way to construct the 5-tree, we see that it is impossible to achieve the proposed tree structure w. r. t. the definition of weighted quick union tree.
+
+Therefore, the given tree CANNOT be the result of running weighted quick-union.
