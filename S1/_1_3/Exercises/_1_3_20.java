@@ -11,10 +11,11 @@ public class _1_3_20<Item> extends MyLinkedList<Item> {
             throw new IndexOutOfBoundsException("Index out of bounds, cannot delete at index that doesn't exist.");
         }
         // If index == 0, set whole chain as empty
-        if (this.N == 1) {
-            this.first = null;
+        if (idx == 0) {
+            Item item = this.first.item;
+            this.first = this.first.next;
             this.N--;
-            return null;
+            return item;
         }
         // Get node and its predecessor
         Node node = this.findAt(idx);

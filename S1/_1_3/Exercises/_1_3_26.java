@@ -13,7 +13,7 @@ public class _1_3_26 extends _1_3_20<String> {
             // If current node is 
             if (node.item == key) {
                 node = node.next; // Jump to next element before deletion (don't increase index)
-                delete(i); // This is not efficient. "delete" is already 2*n and we're doing this for each entry in the list (potentially). Polynomial complexity
+                this.delete(i); // This is not efficient. "delete" is already 2*n and we're doing this for each entry in the list (potentially). Polynomial complexity
             } else {
                 // Increment i and jump to next node if not deleting
                 node = node.next;
