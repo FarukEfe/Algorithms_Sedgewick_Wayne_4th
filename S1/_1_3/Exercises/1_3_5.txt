@@ -1,0 +1,16 @@
+For a positive integer n, the given code in the question
+
+ . pushes the remainder of n by 2 (n % 2) in an initially empty stack
+ . divides assigns n = n / 2
+
+This process repeats until n (as an integer) reaches 0. Now let's run over the code if n = 50 (remember that n is integer so decimal points will decay):
+
+50 % 2 is 0 and 50 / 2 = 25. push(0) -> [0]
+25 % 2 is 1 and 25 / 2 = (int)12.5. push(1) -> [0,1]
+12 % 2 is 0 and 12 / 2 = 6. push(0) -> [0,1,0]
+6 % 2 is 0 and 6 / 2 = 3. push(0) -> [0,1,0,0]
+3 % 2 is 1 and 3 / 2 = (int)1.5. push(1) -> [0,1,0,0,1]
+1 $ 2 is 1 and 1 / 2 = (int)0.5. push(1) -> [0,1,0,0,1,1]
+n = (int)0.5 = 0 (The loops ends)
+
+Therefore, our final stack list will be [0,1,0,0,1,1].

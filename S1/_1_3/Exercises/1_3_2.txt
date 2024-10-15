@@ -1,0 +1,22 @@
+Assume our initial stack is empty and we have the following sequence:
+
+it was - the best - of times - - - it was - the - -
+
+where "-" represents a pop command, and words represent a push command of the given word.
+
+In this case, the final output of the stack would be as follows:
+
+push(it) -> [it]
+push(was) -> [it, was]
+pop() -> [it]
+push(the) -> [it, the]
+push(best) -> [it, the, best]
+pop() -> [it, the]
+push(of, times) -> [it, the, of, times]
+pop(3 times) -> [it]
+push(it, was) -> [it, it, was]
+pop() -> [it, it]
+push(the) -> [it, it, the]
+pop(2 times) -> [it]
+
+The final stack result would be [it].
