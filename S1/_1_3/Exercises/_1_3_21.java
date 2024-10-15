@@ -7,11 +7,12 @@ public class _1_3_21 extends MyLinkedList<String> {
     public boolean find(String key) {
 
         Node node = this.first;
-        for (int i=1;i<this.N;i++) {
+        for (int i=0;i<this.N;i++) {
             if (node.item == key) {
                 return true;
             }
             node = node.next;
+            i++;
         }
 
         return false;

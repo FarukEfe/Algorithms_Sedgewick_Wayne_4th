@@ -2,7 +2,7 @@ package S1._1_3;
 
 import java.util.Iterator;
 
-public class Stack<Item> implements Iterable<Item> {
+public class MyStack<Item> implements Iterable<Item> {
 
     @SuppressWarnings("unchecked")
     private Item[] items = (Item[]) new Object[1];
@@ -29,7 +29,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
     
     public static void main(String[] args) {
-        Stack<Integer> st = new Stack<Integer>();
+        MyStack<Integer> st = new MyStack<Integer>();
         st.push(0);
         int num = st.pop();
         System.out.println(num);
