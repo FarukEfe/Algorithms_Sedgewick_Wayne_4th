@@ -1,0 +1,7 @@
+a. n + 1 is O(n)
+b. 1 + 1/n is O(1) (provided that n > 0)
+c. (1 + 1/n)*(1 + 2/n) is O(1) (provided that n > 0)
+d. n^3 - 15n^2 + n is O(n^3)
+e. lg(2n) / lg (n) is O(1)
+f. lg(n^2 + 1) / lg (n) is O(1)
+g. n^100 / 2^n is O(0) (for very large n)

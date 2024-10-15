@@ -4,23 +4,21 @@ import java.util.Iterator;
 
 public class Stack<Item> implements Iterable<Item> {
 
-    private int[] items = {};
+    @SuppressWarnings("unchecked")
+    private Item[] items = (Item[]) new Object[1];
     int length = 0;
 
-    public Stack() {
-        
-    }
-
-    public void push(int item) {
+    public void push(Item item) {
         this.items[this.length++] = item;
     }
 
-    public int pop() throws Exception {
+    public Item pop() {
         if (this.length == 0) {
-            throw new Exception("Stack underflow.");
+            System.out.println("Stack underflow.");
+            return null;
         }
-        int item = this.items[--this.length];
-        this.items[this.length] = -1;
+        Item item = this.items[--this.length];
+        this.items[this.length] = null;
         return item;
     }
 
@@ -30,4 +28,12 @@ public class Stack<Item> implements Iterable<Item> {
         throw new UnsupportedOperationException("Unimplemented method 'iterator'");
     }
     
+    public static void main(String[] args) {
+        Stack<Integer> st = new Stack<Integer>();
+        st.push(0);
+        int num = st.pop();
+        System.out.println(num);
+        num = st.pop();
+        System.out.println(num);
+    }
 }

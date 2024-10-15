@@ -1,0 +1,36 @@
+(solution for a) 
+
+We know that the inner loop will run from 0 to k, where k is initially n and k = k / 2 each loop until (int) k = 0.
+From this, we deduce that the inner loop will follow the pattern:
+
+n + n / 2 + n / 4 + n / 8 + n / 16 + ...
+
+We can simplify this expression as follows:
+
+n * (1 + 1 / 2 + 1 / 4 + 1 / 8 + ...)
+
+where the series converge to 1 + 1 / 2 + 1 / 4 + ... = 2.
+
+That means the order of growth (as a function of n) could be expressed as O(n) where n_0 = 1 and c = 2.
+
+(solution for b)
+
+The code follows a similar growth patter as shown in part a. However, the pattern is in reverse:
+
+... + n / 16 + n / 8 + n / 4 + n / 2 (I excluded '+ n' because outer loop states that i < n)
+
+which conveniently simplifies into:
+
+n * (... + 1 / 16 + 1 / 8 + 1 / 4 + 1 / 2)
+
+This (again) simplifies into n * 1 due to the convergence of the series.
+
+Therefore, a reasonable order of growth for part b is O(n) where n_0 = 1 and c = 1.
+
+(solution for c)
+
+Since the inner loop always runs from 0 to n, and range between i and n reduces by half each time (i = 1 initially), total amount of times the loop will iterate is:
+
+n + n + n + n + n + n + ... (log_2(n) times)
+
+Consequently, a reasonable order of growth for the code in c is O(n*log(n)). 
