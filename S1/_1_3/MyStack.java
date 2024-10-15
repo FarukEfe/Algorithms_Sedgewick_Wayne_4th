@@ -8,7 +8,17 @@ public class MyStack<Item> implements Iterable<Item> {
     private Item[] items = (Item[]) new Object[1];
     int length = 0;
 
+    @SuppressWarnings("unchecked")
+    private void resize(int max) {
+        Item[] temp = (Item[]) new Object[max];
+        for (int i=0;i<this.length;i++) {
+            temp[i] = this.items[i];
+        }
+        this.items = temp;
+    }
+
     public void push(Item item) {
+        if (this.length == this.items.length) resize(this.items.length * 2);
         this.items[this.length++] = item;
     }
 
@@ -19,6 +29,7 @@ public class MyStack<Item> implements Iterable<Item> {
         }
         Item item = this.items[--this.length];
         this.items[this.length] = null;
+        if (this.length <= this.items.length / 4) resize(this.items.length / 2);
         return item;
     }
 
@@ -27,13 +38,5 @@ public class MyStack<Item> implements Iterable<Item> {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'iterator'");
     }
-    
-    public static void main(String[] args) {
-        MyStack<Integer> st = new MyStack<Integer>();
-        st.push(0);
-        int num = st.pop();
-        System.out.println(num);
-        num = st.pop();
-        System.out.println(num);
-    }
+
 }
