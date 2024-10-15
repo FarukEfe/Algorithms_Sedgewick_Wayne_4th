@@ -1,0 +1,3 @@
+The sequence of commands have to push elements in order. So any of these sequences not in ascending order cannot be created.
+
+Except for a, the rest (b, c, d) cannot be created with the given sequence of operations.

@@ -1,0 +1,6 @@
+The following code fragment doesn't work the same as in the previous question.
+
+By assigning x.next = t, we have overwritten the previous .next (the continuation of the list) with t. So in t.next = x.next, we basically connect t to itself.
+
+t.next = t -> This question
+t.next = x.next ( != t ) -> Previous question
