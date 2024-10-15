@@ -36,7 +36,7 @@ public class MyLinkedList<Item> {
         }
 
         Node node = this.first;
-        for (int i=1;i<idx;i++) {
+        for (int i=1;i<=idx;i++) {
             node = node.next;
         }
 
