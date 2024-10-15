@@ -1,0 +1,28 @@
+(For the code that is being analyzed, refer to the ThreeSum algorithm on page 173.)
+
+We have two operations independent from input size n + declaring the 1st loop variable 'i'. (3 arguments)
+
+At the top loop , we have 2 arguments for the loop + declaring the 2nd loop variable 'j'. (3 arguments)
+
+At the middle loop, we have 2 arguments for the loop + declaring the 3rd loop variable 'k'. (3 arguments)
+
+At the innermost loop, we have 7 operations:
+ . k++
+ . check k < n
+ . get a[i]
+ . get a[j]
+ . get a[k]
+ . check a[i] + a[j] + a[k] == 0
+ . count++ if the conditional is true (we'll assume it always is)
+
+Outer loop runs n times, middle loop runs j_count = (n - 1) * n / 2 times, and innermost loop runs k_count = (j_count - 1) * j_count / 2 times.
+
+We're also returning the 'count' variable at the end. (1 argument)
+
+Therefore, the number of arguments / operations that are going to happen based on the input size n is as follows:
+
+3 arguments + 3 arguments * n + 3 arguments * j_count + 7 arguments * k_count + 1 argument
+
+which is,
+
+3*n + 3 * ((n - 1) * n / 2) + 3 * ((((n - 1) * n / 2) - 1) * ((n - 1) * n / 2) / 2) + 4
