@@ -22,7 +22,7 @@ public class MyLinkedList<Item> {
         }
         Node node = this.first;
         int limit = (has_pointer) ? this.N - 1 : this.N;
-        for (int i=0;i<limit;i++) {
+        for (int i=1;i<limit;i++) {
             node = node.next;
         }
         return node;
@@ -36,7 +36,7 @@ public class MyLinkedList<Item> {
         }
 
         Node node = this.first;
-        for (int i=0;i<idx;i++) {
+        for (int i=1;i<idx;i++) {
             node = node.next;
         }
 
