@@ -1,0 +1,2 @@
+(answer to linked list -> int)
+
