@@ -1,0 +1,7 @@
+In the best case, quicksort will make two even-sized sub-problems. In this case, the recursive depth of the sort will be log_2(n), where n is the size of the list.
+
+In the worst case, quicksort will take the worst pivot possible for a list n and one sub-problem will be empty, whereas the other will be of length n - 1.
+In this case, the recursive depth of the sort will be n - 1.
+
+In the average case, the quicksort algorithm will pick a pivot that more or less evenly (or unevenly) splits the list into 2 sub-problems.
+The recursive depth will be bigger than log_2(n) and smaller than n - 1.
