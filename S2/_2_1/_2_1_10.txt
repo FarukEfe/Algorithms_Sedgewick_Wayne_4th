@@ -1,0 +1,5 @@
+The time complexity of selection sort in a worst-case list is not efficient enough for the h-shell sort implementation.
+
+Selection sort with h steps will still compare all h-items when the list is already h-sorted.
+
+Therefore, insertion sort is a better fit than selection sort for implementing h-shell sort.
