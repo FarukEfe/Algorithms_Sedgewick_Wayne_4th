@@ -1,0 +1,33 @@
+List of length 1 uses 0 comparisons. List of length 2 uses 1 comparison.
+
+List of length 3 consists of sub-lists of lengths 2, and 1. When merging, it compares list of 1 element through the list of 2 elements.
+
+Therefore, C(3) = C(1) + C(2) + k, where k is some positive integer
+
+Therefore, C(3) > C(1) + C(2)
+
+...
+
+List of length n - 1 consts of sub-lists of lengths floor((n - 1) / 2) and ceil((n - 1) / 2). When merging, it compares the elements of 1 list through the elements of the other list.
+
+Assign a_0 = floor((n - 1) / 2) and b_0 = ceil((n - 1) / 2)
+
+Therefore, C(n - 1) = C(a_0) + C(b_0) + k, where k_0 is some smaller positive integer
+
+Therefore, C(n - 1) > C(a_0) + C(b_0)
+
+...
+
+List of length n consts of sub-lists of lengths floor(n / 2) and ceil(n / 2). When merging, it compares the elements of 1 list through the elements of the other list.
+
+Assign a = floor(n / 2) and b = ceil(n / 2)
+
+Therefore, C(n) = C(a) + C(b) + k, where k is some larger positive integer
+
+Therefore, C(n) > C(a) + C(b)
+
+...
+
+Knowing that a_0 < a, b_0 < b, and k_0 < k,
+
+Therefore, C(n) > C(n - 1) for all n > 0.
