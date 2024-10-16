@@ -1,0 +1,10 @@
+To recall how selection sort works, it replaces the current index with the minimum item in the list that comes after it.
+
+Even though we're traversing the list from each entry, the amount of exchanges per individual item is limited. There's two situations:
+
+ - The item is already where it belongs: 0 exchanges
+ - The item is the maximum (not at the end): 1 exchange
+ - The item is exchanged before the outer loop reaches it: 1 exchange
+ - The item is smaller than where it belongs, but not maximum: 2 exchanges
+
+The maximum amount of exchanges for a single item is 2 and the minimum amount of exchanges is 0.

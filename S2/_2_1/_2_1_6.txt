@@ -1,0 +1,10 @@
+Selection sort replaces the current index with the minimum number that comes after in the list.
+Insertion sort pushes the current element down the list until the number comes before it is smaller.
+
+When all keys are identical, selection sort will traverse the list from each entry, before making sure that there's no exchanges.
+When all keys are identical, insertion sort will instantly stop pushing down the current element, because the precedent is smaller.
+
+Selection sort will run at time complexity O(n^2) in this situation.
+Insertion sort will run at time complexity O(n) in this situation.
+
+Insertion sort runs faster than selection sort if all keys of the list are identical.
