@@ -1,0 +1,7 @@
+Assume a list of n elements where l conveniently represents the largest number. Assume that l is at the start of the list (worst-case placement for l).
+
+Assume that a pivot is chosen s. t. pivot = min of the list. l remains at the start of the subproblem as well.
+
+When this idea is applied repetitively, we realize that l will remain at the start of each subproblem until the base case, where sublist = [l].
+
+Therefore, in the worst-case there'll be n - 1 exchanges for the largest item in a list of length n.
