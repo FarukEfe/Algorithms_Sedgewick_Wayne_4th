@@ -1,0 +1,21 @@
+We can express a list of only 3 values as follows:
+
+[ c , c , ... , c , c , b , b , ... , b , b , a , a , ... , a , a ]
+
+For the worst-case situation, we can assume c > b > a (reversed list). We can also assume that there's n/3 c's, b's, and a's in a list length of n.
+
+Insertion sort will push down each b item to the start of c values first with n / 3 exchanges with n / 3 items.
+
+[ b , b , ... , b , b , c , c , ... , c , c , a , a , ... , a , a ]
+
+After, insertion sort will push down each a item to the start of b elements with (2 * n / 3) exchanges with n / 3 items.
+
+The total number of operations (exchanges) will be:
+
+(n / 3) * (n / 3) + (2 * n / 3) * (n / 3) = n^2 / 9 + 2*n^2 / 9 = n^2 / 9 (quadratic)
+
+In the worst-case situation, insertion sort is quadratic.
+
+The worst-case situation reflects the behaviour of the algorithm for the given knowledge on input (3 possible values for each item).
+
+Insertion sort runs at an expected time complexity of O(n^2) where the items in the list can only become 1 of 3 values.
