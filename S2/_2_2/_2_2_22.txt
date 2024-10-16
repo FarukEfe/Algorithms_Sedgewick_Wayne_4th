@@ -1,0 +1,6 @@
+In conventional merge sort (2 sub-problembs per recursive branch), we divide the list into 2 similar length sub-lists to sort.
+We repeat this until reaching the base case, where we return the list itself.
+Due to this reason, the assured runtime of mergesort is ~ n*log_2(n), represented as O(n*log(n)).
+
+In a 3-way merge sort, we divide the list into 3 subproblems of similar length, which is repeated until reaching the base case just like in 2-way merge sort.
+Due to this reason, the runtime of 3-way mergesort is ~ n*log_3(n), also represented as O(n*log(n)).
