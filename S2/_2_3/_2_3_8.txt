@@ -1,0 +1,7 @@
+When we're splitting the list of length n into two sub-problems, we're making n - 1 comparisons between the pivot and every other value in the list.
+
+However, we know that when all items are equal, they'll all end up being on the same side of the pivot point. This means that every pivot is a worst-case pivot.
+
+In that case, the subproblems will be from length n to 1 (represented as k), each for which we'll run k - 1 comparisons
+
+Therefore, in the case that all items are equal, Quick.sort() will run (n - 1) * n / 2 comparisons to sort the array.
