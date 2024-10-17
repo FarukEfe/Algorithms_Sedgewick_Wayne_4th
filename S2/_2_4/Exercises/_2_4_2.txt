@@ -1,0 +1,5 @@
+Implementing stack or queue would make it difficult to remove the maximum since we would have to iterate through the list in the process.
+
+Even if we record the index of the maximum element, still we would have to shift every value that comes after it once before in the removal of the maximum value, which is a linear-time process.
+
+To keep both insertion and deletion at a convenient ~ log(n) time complexity, we prefer to use heaps in the implementation of ordered priority queues.

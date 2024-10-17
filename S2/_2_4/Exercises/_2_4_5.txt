@@ -1,0 +1,76 @@
+The resulting heap forms with the following steps:
+
+insert(E):      E
+
+insert(A):      E
+               /
+              A
+
+insert(S):      E            S
+               / \   ->     / \
+              A   S        A   E
+
+insert(Y):      S            Y
+               / \   ->     / \
+              A   E        S   E
+             /            /
+            Y            A
+
+insert(Q):      Y 
+               / \  
+              S   E 
+             / \       
+            A   Q  
+
+     
+insert(U):        Y                 Y
+               /     \           /     \
+              S       E   ->    S       U
+             / \     /         / \     /
+            A   Q   U         A   Q   E
+
+insert(E):        Y  
+               /     \  
+              S       U 
+             / \     / \
+            A   Q   E   E
+
+insert(S):        Y                 Y
+               /     \           /     \
+              S       U   ->    S       U
+             / \     / \       / \     / \
+            A   Q   E   E     S   Q   E   E
+           /                 /
+          S                 A
+
+insert(T):        Y                 Y
+               /     \           /     \
+              S       U   ->    T       U
+             / \     / \       / \     / \
+            S   Q   E   E     S   Q   E   E
+           / \               / \
+          A   T             A   S
+
+insert(I):         Y  
+                /     \    
+               T       U  
+              / \     / \    
+            S     Q   E   E    
+          /   \  /     
+          A   S  I     
+
+insert(O):         Y   
+                /     \  
+               T       U 
+              / \     / \    
+            S     Q   E   E
+          /   \  / \        
+          A   S  I  O
+
+insert(N):          Y                         Y
+                /        \               /        \
+               T          U    ->       T          U
+              / \        / \           / \        / \
+            S    Q      E   E        S     Q     N   E
+          /   \  /\    /            / \   / \   /
+          A   S  I  O  N            A S   I O   E
