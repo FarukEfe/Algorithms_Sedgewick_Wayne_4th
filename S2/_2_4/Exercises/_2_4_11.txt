@@ -1,0 +1,9 @@
+It is in our best interest to use an unordered PQ if we're using only very few delete operations, and largely insertion operations.
+
+Insertion in unordered PQ runs at a constant time complexity O(1).
+
+Deletion in unordered PQ runs at a linear time complexity O(n).
+
+Since we're predominantly using insertion, we want to take an implementation that minimizes time complexity of insert().
+
+Unordered PQ is extremely convenient for this.
