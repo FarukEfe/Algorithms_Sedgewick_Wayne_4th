@@ -1,0 +1,9 @@
+Largest elem. has to be the topmost node.
+
+2nd largest element is either i = 1 or i = 2 (children of the topmost node).
+
+3rd largest element is either the child of topmost node at best case, or any position at depth 2 in the worst case.
+
+The idea is that kth max element cannot be found anywhere after depth k - 1, and it surely has to be after depth where index is k.
+
+kth largest element can be found between depth log_2(n) <= d < k (answer to i), and cannot be anywhere else (answer to ii)
