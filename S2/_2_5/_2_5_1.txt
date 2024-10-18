@@ -1,0 +1,3 @@
+If two strings are equal, we don't have to bother iterating through each character; we might as well return the equality result from the start.
+
+Avoids a linear complexity in a special case.
