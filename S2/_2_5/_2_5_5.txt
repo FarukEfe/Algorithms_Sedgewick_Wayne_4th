@@ -1,0 +1,7 @@
+Selection sort is not stable since it performs at a polynomial (quadratic) time complexity EVEN IN THE BEST CASE OF A SORTED LIST.
+
+Due to this reason, selection sort will run poorly slow on all cases of the data, despite the distribution of values.
+
+When reaching large amounts of data, selection sort will take hours, or days to run.
+
+Selection sort is not a stable algorithm.
