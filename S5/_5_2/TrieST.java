@@ -4,9 +4,17 @@ public class TrieST<Value> {
     private final static int R = 256;
     private Node root = new Node();
 
-    private static class Node {
+    protected static class Node {
         private Object val;
         private Node[] next = new Node[R];
+    }
+
+    public Node[] nextNodes(Node x) {
+        return x.next;
+    }
+
+    public Node getRoot() {
+        return this.root;
     }
 
     public Value get(String key) {
@@ -30,5 +38,28 @@ public class TrieST<Value> {
         char c = key.charAt(d);
         x.next[c] = put(x.next[c], key, val, d+1);
         return x;
+    }
+
+    @Override
+    public String toString() {
+        return this.toString(this.root);
+    }
+
+    private String toString(Node x) {
+        if (x == null) return "";
+        String str = "";
+        for (int i=0; i<x.next.length; i++) {
+            Node child = x.next[i];
+            str += (child == null) ? "" : ((char) i + " -> " + this.toString(child) + "\n");
+        }
+        return str;
+    }
+
+    public static void main(String[] args) {
+        TrieST<Integer> trie = new TrieST<Integer>();
+        trie.put("key", 3);
+        trie.put("keen",7);
+        trie.put("george", 4);
+        System.out.println(trie.toString());
     }
 }
