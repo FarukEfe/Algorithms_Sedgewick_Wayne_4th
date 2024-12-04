@@ -1,20 +1,16 @@
 package S5._5_2;
 
 public class TrieST<Value> {
-    private final static int R = 256;
-    private Node root = new Node();
+    protected final static int R = 256;
+    protected Node root = new Node();
 
     protected static class Node {
-        private Object val;
-        private Node[] next = new Node[R];
+        protected Object val;
+        protected Node[] next = new Node[R];
     }
 
     public Node[] nextNodes(Node x) {
         return x.next;
-    }
-
-    public Node getRoot() {
-        return this.root;
     }
 
     public Value get(String key) {

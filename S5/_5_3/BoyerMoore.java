@@ -39,7 +39,7 @@ public class BoyerMoore {
 
     public static void main(String[] args) {
         BoyerMoore bm = new BoyerMoore("BAAAA");
-        int res = bm.search("BABBBABBBBB");
+        int res = bm.search("AAAAABBAAAA");
         int searches = bm.getSearches();
         System.out.println(res + " " + searches);
     }
