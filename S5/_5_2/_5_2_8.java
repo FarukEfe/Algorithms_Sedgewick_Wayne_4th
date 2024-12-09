@@ -1,20 +1,44 @@
 package S5._5_2;
 
-import S5._5_2.TrieST.Node;
-
-@SuppressWarnings("rawtypes")
-public class _5_2_8 extends TrieST{
+public class _5_2_8<Value> extends TrieST<Value> {
 
     // MARK: Floor
 
+    // Floor is the largest element one rank smaller
+    public String floor(String key) throws Exception {
+        
+        if (key == null) throw new Exception("key cannot be null.");
+        if (this.contains(key)) return key;
+
+        int rank = this.rank(key);
+        if (rank == 0) return null;
+        return this.select(rank - 1);
+    }
+
+    // MARK: Ceiling
+
+    // Ceil is the smallest element one rank larger
+    public String ceiling(String key) throws Exception {
+
+        if (key == null) throw new Exception("key cannot be null.");
+        if (this.contains(key)) return key;
+
+        int rank = this.rank(key);
+        if (rank == this.getSize()) return null;
+        return this.select(rank + 1);
+    }
+
     // MARK: Rank
 
-    public int rank(String key) {
+    public int rank(String key) throws Exception {
+
+        if (key == null) throw new Exception("key cannot be null.");
+
         return this.rank(this.root, key, 0);
     }
 
     // Return total # words strictly smaller than key
-    public int rank(Node x, String key, int d) {
+    private int rank(Node x, String key, int d) {
 
         if (x == null) return 0;
 
@@ -24,7 +48,7 @@ public class _5_2_8 extends TrieST{
         int c = (int) key.charAt(d);
         for (int i = 0; i<=c; i++) { // Get each next node that's smaller or equal to current character of key
             // Last character of the string should be strictly greater than any possible string, so skip
-            if (d >= key.length() - 1) {
+            if (i == c && d >= key.length() - 1) {
                 continue;
             }
             Node next = x.next[i]; // Next node
@@ -36,11 +60,14 @@ public class _5_2_8 extends TrieST{
     
     // MARK: Select
 
-    public String select(int k) {
+    public String select(int k) throws Exception {
+
+        if (k < 0) throw new Exception("index has to be non-negative.");
+
         return this.select(this.root, k, new StringBuilder());
     }
 
-    public String select(Node x, int k, StringBuilder str) {
+    private String select(Node x, int k, StringBuilder str) {
         if (x == null) { return null; }
         if (x.val != null) { k--; }
         if (k == -1) { return str.toString(); }

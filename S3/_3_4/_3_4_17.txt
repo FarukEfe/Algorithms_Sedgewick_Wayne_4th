@@ -1,0 +1,19 @@
+By the textbook implementation of delete(), we would first remove C from the table, and re-insert all the succeeding entries until we hit a null entry.
+After removal here's the table:
+0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+P  M        A     S  H  L     E               R   X
+
+First we re-insert S (hash value 6 so keeps its place):
+
+0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+P  M        A     S  H  L      E              R   X
+
+Now H (hash value 4 which is occupied by a so we linear probe to nearest location):
+
+0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+P  M        A  H  S     L      E              R   X
+
+Apply same logic to L with hash value 6 and we get our final hash table:
+
+0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+P  M        A  H  S  L         E              R   X

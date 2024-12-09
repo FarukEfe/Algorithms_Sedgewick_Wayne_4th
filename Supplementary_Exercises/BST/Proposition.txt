@@ -1,0 +1,3 @@
+Proposition: Search hits in a BST built from n random keys require ~ 2 ln n compares, on the average.
+
+Proof:

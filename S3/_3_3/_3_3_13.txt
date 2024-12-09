@@ -1,0 +1,2 @@
+False. The tree balances itself to maintain balanced height (height before insertion) and it only increases height if both root.left and root.right are red.
+In that case, root.left and root.right are already balanced, so the tree heigiht after color flip of the root is still balanced.

@@ -1,0 +1,10 @@
+Corollary: Inserting n distinct keys into an initially empty linked-list symbol table uses ~ n^2 / 2 compares
+
+Proof:
+(Referring to the textbook API) When we insert a new value in some key k, we iterate through all previous keys until finding k.
+Due to this reason we do k compares in a single insertion for a value at k.
+
+We can assume that in the general case, we perform n insertions for keys 1 ... n.
+This means we'll perform 1 comparison for the 1st insertion, 2 for the 2nd, and n for the nth. Overall, we'll have made:
+1 + 2 + 3 + 4 + ... + n compares for n insertions. This can be expressed as (n * (n + 1)) / 2 ~ n^2 / 2 comparisons.
+
