@@ -1,0 +1,7 @@
+Maximum number of directed edges with no parallelism is offered by each vertex directing to V - 2 nodes.
+
+This is because there'll be one other vertex that'll point to it, which will differ for each vertex.
+
+If each vertex points to V - 2 nodes and we repeat this for V vertices, the maximum number of directed edges
+is V * (V - 2).
+

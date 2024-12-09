@@ -1,0 +1,6 @@
+Topological order derives from the reverse postorder of a graph G.
+
+Since the definition of reverse postorder is based on the dfs() algorithm, it is impossible to come up with
+a reverse postorder that cannot be found using dfs() by definition.
+
+Thus it is impossible to find a topological order that cannot be derived using dfs().

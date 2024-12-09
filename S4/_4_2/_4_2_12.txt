@@ -1,0 +1,9 @@
+Assume a strongly connected component pair v - w where a path v -> w (label it a) and w -> v (label it b) exists in G.
+
+When we take reverse(G), by definition a := b and b := a. 
+
+Since a is now w -> v and b is v -> w, w and v are still strongly connected components.
+
+Since v and w are arbitrary, same principle applies to all scc pairs v - w in G. 
+
+Therefore, all strong component pairs v - w in G and that of reverse(G) are the same.
