@@ -1,0 +1,5 @@
+The time complexity of PrimMST comes from using pq.delMin(), which is ~ O(log(n)) times for n < E edges inside it.
+
+However if we used a distTo[] array to get the minimum edge, search for minimum edge would be linear.
+
+Repeating this until the list is empty, the new time complexity would likely be ~ O(E^2)

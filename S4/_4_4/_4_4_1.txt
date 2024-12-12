@@ -1,0 +1,5 @@
+False. If some weights are negative, Bellman-Ford would give us some solution. 
+
+However, say a positive constant that is bigger in magnitude than the most negative weight would make all weights positive.
+
+The new graph would have a solution (using Dijkstra's) to the shortest path problem that is incorrect for the original graph with negative weights.

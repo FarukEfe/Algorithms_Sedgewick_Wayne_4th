@@ -1,0 +1,10 @@
+Question: Verbally explain how you would devise an algorithm that would determine if a graph is bipartite or not.
+
+Answer: Assume the graph is connected and run a bfs search starting from a node.
+
+With each bfs call, store the adjacents of a layer in a queue. Repeat this process by replacing queue with next layer of adjacents.
+
+For replacing vertices in queue, visit adjacents of each node. If any adjacent is already in the queue, return false.
+
+Else, remove current vertex and store adjacents in a new queue. Repeat this for each vertex in queue.
+

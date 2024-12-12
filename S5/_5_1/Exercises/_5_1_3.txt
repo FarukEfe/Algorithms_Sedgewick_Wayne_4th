@@ -1,0 +1,37 @@
+We have keys: 
+
+no 
+is 
+th 
+ti 
+fo 
+al 
+go 
+pe 
+to 
+co 
+to 
+th 
+ai 
+of 
+th 
+pa
+
+MSD Sort Trace (Sort by most significant number):
+
+al        ai
+ai        al
+co        co
+fo        fo
+go        go
+is        is
+no        no
+of  -->   of 
+pe        pa
+pa        pe
+th        th
+ti        th
+to        th
+to        ti
+th        to
+th        to

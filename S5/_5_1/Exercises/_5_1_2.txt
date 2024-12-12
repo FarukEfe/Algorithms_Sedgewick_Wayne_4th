@@ -1,0 +1,37 @@
+We have keys: 
+
+no 
+is 
+th 
+ti 
+fo 
+al 
+go 
+pe 
+to 
+co 
+to 
+th 
+ai 
+of 
+th 
+pa
+
+LSD Sort Trace (Sort by least significant number):
+
+pa         ai
+pe         al
+of         co
+th         fo
+th         go
+th         is
+ti         no
+ai   -->   of
+al         pa
+no         pe
+fo         th
+go         th
+to         th
+co         ti
+to         to
+is         to

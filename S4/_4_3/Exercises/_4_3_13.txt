@@ -1,0 +1,4 @@
+This is not necessarily true. We're tunneling on the adjacents connecting to the recently added vertex, missing out of potentially better paths to some destination vertex v.
+
+Also this method assumes that you can reach from one vertex to every other vertex, which is not necessarily the case.
+Using this method may result in incomplete tree if we end up at a vertex with no outgoing edges before including all vertices.

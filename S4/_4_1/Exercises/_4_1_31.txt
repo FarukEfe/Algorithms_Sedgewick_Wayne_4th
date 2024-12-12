@@ -1,0 +1,8 @@
+Assume no self-loops.
+
+With 1 connection: we get V * (V - 1) connections (but bidirectional pairs) so V * (V - 1) / 2 different pairs of graphs.
+
+With 2 connections: We get the same amount of 1-connection graphs * all combinations with a new connection that doesn't repeat.
+Gets us (V * (V - 1) / 2) * ((V * (V - 1) / 2) - 1)
+
+... (To be continued)

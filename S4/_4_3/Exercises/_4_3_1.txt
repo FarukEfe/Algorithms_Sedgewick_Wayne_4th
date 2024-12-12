@@ -1,0 +1,17 @@
+If MST remains the same after the addition or multiplication, this is equal to claiming the order of edges by weight remains the same.
+
+This is true. Imagine having a sequence of edges with weights w_1 through w_n such that:
+
+w_1 < w_2 < w_3 < ... < w_n
+
+We know for two numbers a, b and a positive constant c, addition of c and multiplication of c protects order
+
+a < b => a + c < b + c
+a < b => a * c < b * c 
+
+Thus we know the order of weights will remain the same after + and * with an arbitrary positive constant c
+
+w_1 < w_2 < w_3 < ... < w_n => w_1 + c < w_2 + c < w_3 + c < ... < w_n + c
+w_1 < w_2 < w_3 < ... < w_n => w_1 * c < w_2 * c < w_3 * c < ... < w_n * c
+
+Therefore, the formed MST will remain the same.
